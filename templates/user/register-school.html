@@ -1,0 +1,29 @@
+<ion-view hide-tabs class="register-school" view-title="选择学校">
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+
+    </button>
+
+  </ion-nav-buttons>
+  <ion-content>
+
+    <ion-list>
+      <ion-item class="item-input">
+            <span class="item-input-wrapper" style="margin-right:16px">
+                    <i class="icon ion-ios-search placeholder-icon" ng-click="search()"></i>
+                    <input id="search" ng-change="search()" type="search" placeholder="请输入学校全称或拼音缩写" ng-model="searchContent.key">
+             </span>
+      </ion-item>
+        <ion-item ng-if="!show"  ng-repeat="item in ItemArr2">
+            {{item}}
+        </ion-item>
+          <ion-item ng-if="show" ng-repeat="item in school">
+              {{item}}
+          </ion-item>
+    </ion-list>
+
+
+
+
+</ion-content>
+</ion-view>

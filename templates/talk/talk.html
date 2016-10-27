@@ -1,9 +1,42 @@
-<ion-view view-title="交流">
+<ion-view hide-nav-bar="true" view-title="交流">
   <ion-content>
-    <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+    <div class="talk-title">
+      <button class="talk-title-left icon ion-ios-list-outline"></button><button class="talk-title-change">消息</button><button>关注</button><button class="talk-title-right icon ion-plus-round"></button>
+    </div>
+
+    <ion-list class="talk-title">
+
+      <ion-item   class="item-thumbnail-left"  collection-item-width="100%">
+        <img  ng-src="img/logo.png" class="talk-title-logo">
+        <div class="talk-title-detail">
+          <h2>武洁</h2>
+
+        </div>
+        <p class="talk-title-say">匠心语：想别人不敢想，做别人不敢做。</p>
+      </ion-item>
+
+
+      <ion-item   class="item-thumbnail-left"  collection-item-width="100%">
+        <img  ng-src="img/logo.png" class="talk-title-logo">
+        <div class="talk-title-detail">
+          <h2>武洁</h2>
+
+        </div>
+        <p class="talk-title-say">匠心语：想别人不敢想，做别人不敢做。</p>
+      </ion-item>
+
+
+      <ion-item   class="item-thumbnail-left"  collection-item-width="100%">
+        <img  ng-src="img/logo.png" class="talk-title-logo">
+        <div class="talk-title-detail">
+          <h2>武洁</h2>
+
+        </div>
+        <p class="talk-title-say">匠心语：想别人不敢想，做别人不敢做。</p>
+      </ion-item>
+
+
+
     </ion-list>
   </ion-content>
 </ion-view>
