@@ -3,23 +3,32 @@
     <button class="button back-button buttons button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
 
     </button>
-
   </ion-nav-buttons>
-  <ion-content>
+
+
+
+  <ion-content class="register-school-content">
 
     <ion-list>
-      <ion-item class="item-input">
+        <ion-item class="register-school-search item-input">
             <span class="item-input-wrapper" style="margin-right:16px">
                     <i class="icon ion-ios-search placeholder-icon" ng-click="search()"></i>
-                    <input id="search" ng-change="search()" type="search" placeholder="请输入学校全称或拼音缩写" ng-model="searchContent.key">
+                    <input id="search" ng-change="search()" type="search" placeholder="请输入学校全称" ng-model="searchContent.key">
              </span>
-      </ion-item>
-        <ion-item ng-if="!show"  ng-repeat="item in ItemArr2">
+        </ion-item>
+        <ion-item ng-click="choice_school(item)" ng-if="!show" ng-repeat="item in ItemArr2">
             {{item}}
         </ion-item>
-          <ion-item ng-if="show" ng-repeat="item in school">
-              {{item}}
-          </ion-item>
+        <ion-item ng-click="choice_school(item)" ng-if="show" ng-repeat="item in school">
+          {{item}}
+        </ion-item>
+        <ion-item ng-if="show" class="item-divider">
+            最热学校
+        </ion-item>
+        <ion-item ng-if="show" ng-click="choice_school(item)" ng-repeat="item in school">
+            {{item}}
+        </ion-item>
+
     </ion-list>
 
 

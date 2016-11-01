@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','starter.directive'])
+angular.module('starter', ['ionic', 'starter.controllers','mobiscroll-select', 'starter.services','starter.directive'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -56,11 +56,19 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     views: {
       'tab-nearby': {
         templateUrl: 'templates/nearby/nearby.html',
-        controller: 'DashCtrl'
+        controller: 'NearbyCtrl'
       }
     }
   })
-
+  .state('tab.nearby-theme', {
+    url: '/nearby-theme',
+    views: {
+      'tab-nearby': {
+        templateUrl: 'templates/nearby/nearby-theme.html',
+        controller: 'NearbyThemeCtrl'
+      }
+    }
+  })
   .state('tab.find', {
       url: '/find',
       views: {
@@ -103,6 +111,42 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services','s
     views: {
       'tab-user': {
         templateUrl: 'templates/user/register-school.html',
+        controller: 'RegisterCtrl'
+      }
+    }
+  })
+  .state('tab.register-major', {
+    url: '/register-major',
+    views: {
+      'tab-user': {
+        templateUrl: 'templates/user/register-major.html',
+        controller: 'RegisterCtrl'
+      }
+    }
+  })
+  .state('tab.register-date', {
+    url: '/register-date',
+    views: {
+      'tab-user': {
+        templateUrl: 'templates/user/register-date.html',
+        controller: 'RegisterCtrl'
+      }
+    }
+  })
+  .state('tab.register-detail', {
+    url: '/register-detail',
+    views: {
+      'tab-user': {
+        templateUrl: 'templates/user/register-detail.html',
+        controller: 'RegisterCtrl'
+      }
+    }
+  })
+  .state('tab.register-phone', {
+    url: '/register-phone',
+    views: {
+      'tab-user': {
+        templateUrl: 'templates/user/register-phone.html',
         controller: 'RegisterCtrl'
       }
     }

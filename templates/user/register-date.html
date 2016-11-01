@@ -1,0 +1,23 @@
+<ion-view hide-tabs class="register-school" view-title="入学年份">
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+
+    </button>
+  </ion-nav-buttons>
+
+
+
+  <ion-content class="register-school-content">
+
+    <ion-list>
+        <ion-item ng-click="choice_date(item)" ng-repeat="item in date">
+            {{item}}
+        </ion-item>
+
+    </ion-list>
+
+
+
+
+</ion-content>
+</ion-view>

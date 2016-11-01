@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true" view-title="附近">
+<ion-view hide-nav-bar="true" view-title="">
   <ion-content>
 
 
@@ -31,10 +31,10 @@
     <!--轮播图结束-->
 
     <div class="nearby-title">
-      <button ng-click="ceshi()" class="nearby-title-change">匠</button><button>匠技</button>
+      <button ng-click="change_one()" class="{{title_change_one}}">匠</button><button class="{{title_change_two}}" ng-click="change_two()">匠技</button>
     </div>
 
-    <ion-list class="nearby-list">
+    <ion-list ng-if = "title_change_one && !title_change_two" class="nearby-list">
         <ion-item   class="list-inset item-thumbnail-left"  collection-item-width="100%">
           <img  ng-src="img/logo.png" class="nearby-list-logo">
           <div class="nearby-list-detail">
@@ -101,6 +101,61 @@
       </ion-item>
     </ion-list>
 
+
+    <ion-list ng-if="!title_change_one && title_change_two" class="find-list">
+      <ion-item   class="list-inset item-thumbnail-left"  collection-item-width="100%" href="#/tab/nearby-theme">
+        <img  ng-src="img/logo.png" class="find-list-logo">
+        <div class="find-list-detail">
+          <h2>大学生如何稳扎稳打实现自己的创业梦</h2>
+          <p><span>CEO</span><span>职业经理人</span></p>
+        </div>
+        <div class="find-list-say">
+          <p><i class="icon ion-ios-location-outline"></i> 220km</p>
+          <p><i class="icon ion-ios-cart-outline"></i> 34</p>
+        </div>
+      </ion-item>
+
+      <ion-item   class="list-inset item-thumbnail-left"  collection-item-width="100%">
+        <img  ng-src="img/face.png" class="find-list-logo">
+        <div class="find-list-detail">
+          <h2>大学生如何稳扎稳打实现自己的创业梦</h2>
+          <p><span>CEO</span><span>职业经理人</span></p>
+        </div>
+        <div class="find-list-say">
+          <p><i class="icon ion-ios-location-outline"></i> 220km</p>
+          <p><i class="icon ion-ios-cart-outline"></i> 34</p>
+        </div>
+      </ion-item>
+
+      <ion-item   class="list-inset item-thumbnail-left"  collection-item-width="100%">
+        <img  ng-src="img/face2.jpeg" class="find-list-logo">
+        <div class="find-list-detail">
+          <h2>大学生如何稳扎稳打实现自己的创业梦</h2>
+          <p><span>CEO</span><span>职业经理人</span></p>
+        </div>
+        <div class="find-list-say">
+          <p><i class="icon ion-ios-location-outline"></i> 220km</p>
+          <p><i class="icon ion-ios-cart-outline"></i> 34</p>
+        </div>
+      </ion-item>
+
+      <ion-item   class="list-inset item-thumbnail-left"  collection-item-width="100%">
+        <img  ng-src="img/face3.jpeg" class="find-list-logo">
+        <div class="find-list-detail">
+          <h2>大学生如何稳扎稳打实现自己的创业梦</h2>
+          <p><span>CEO</span><span>职业经理人</span></p>
+        </div>
+        <div class="find-list-say">
+          <p><i class="icon ion-ios-location-outline"></i> 220km</p>
+          <p><i class="icon ion-ios-cart-outline"></i> 34</p>
+        </div>
+      </ion-item>
+
+
+
+
+
+    </ion-list>
 
   </ion-content>
 </ion-view>

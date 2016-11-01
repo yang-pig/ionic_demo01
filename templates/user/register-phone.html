@@ -1,0 +1,31 @@
+<ion-view hide-tabs class="register-phone" view-title="注册臭皮匠">
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+
+    </button>
+  </ion-nav-buttons>
+
+
+
+  <ion-content class="register-phone-content">
+
+      <ion-list>
+          <ion-item class="item-input">
+              手&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;机：
+              <input type="number" ng-model="phone.name">
+          </ion-item>
+          <ion-item class="item-input">
+              密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码：
+              <input type="password" ng-model="phone.pwd">
+          </ion-item>
+      </ion-list>
+
+      <div class="button-bar bar-light padding">
+          <a ng-disabled="phone.name == '' || phone.pwd == ''"  class="button" ng-click="send_phone()">注册</a>
+      </div>
+
+
+
+
+</ion-content>
+</ion-view>

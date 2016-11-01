@@ -1,0 +1,32 @@
+<ion-view hide-tabs class="register-school" view-title="选择专业">
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+
+    </button>
+  </ion-nav-buttons>
+
+
+
+  <ion-content class="register-school-content">
+
+    <ion-list>
+        <ion-item class=" item-input">
+            <span class="item-input-wrapper" style="margin-right:16px">
+                    <i class="icon ion-ios-search placeholder-icon" ng-click="search_major()"></i>
+                    <input id="search" ng-change="search_major()" type="search" placeholder="请输入您的专业" ng-model="searchMajor.key">
+             </span>
+        </ion-item>
+        <ion-item ng-click="choice_major(item)" ng-if="!show" ng-repeat="item in ItemArr3">
+            {{item}}
+        </ion-item>
+        <ion-item ng-click="choice_major(item)" ng-if="show" ng-repeat="item in major">
+          {{item}}
+        </ion-item>
+
+    </ion-list>
+
+
+
+
+</ion-content>
+</ion-view>

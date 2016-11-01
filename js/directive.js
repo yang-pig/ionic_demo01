@@ -8,13 +8,29 @@ var directiveMod=angular.module("starter.directive", []);
 
 
  directiveMod.directive('hideTabs',function($rootScope){
+     //return {
+     //    restrict:'AE',
+     //    link:function($scope){
+     //        $rootScope.hideTabs = 'tabs-item-hide';
+     //        $scope.$on('$destroy',function(){
+     //            $rootScope.hideTabs = '';
+     //        })
+     //    }
+     //}
      return {
-         restrict:'AE',
-         link:function($scope){
-             $rootScope.hideTabs = 'tabs-item-hide';
-             $scope.$on('$destroy',function(){
-                 $rootScope.hideTabs = '';
-             })
+         restrict: 'AE',
+         link: function (scope, element, attributes) {
+             scope.$on('$ionicView.beforeEnter', function () {
+                 scope.$watch(attributes.hideTabs, function () {
+                     $rootScope.hideTabs = 'tabs-item-hide';
+                 });
+             });
+
+             scope.$on('$ionicView.beforeLeave', function () {
+                 $rootScope.hideTabs = false;
+             });
          }
-   } })
+     };
+
+ })
 

@@ -1,0 +1,43 @@
+<ion-view hide-tabs class="" view-title="我的教育信息">
+  <ion-nav-buttons side="left">
+    <button class="button back-button buttons button-icon ion-ios-arrow-left" ng-click="$ionicGoBack()">
+
+    </button>
+  </ion-nav-buttons>
+
+
+
+  <ion-content class="register-detail">
+
+    <ion-list>
+        <ion-item>
+            学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校：{{school_name}}
+        </ion-item>
+        <ion-item>
+            专&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;业：{{major_name}}
+        </ion-item>
+        <ion-item>
+            入学年份：{{date_name}}
+        </ion-item>
+        <ion-item class="item-input">
+            学&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历：
+            <div id="" class="demo-wrapper">
+                <select ng-model="myselect.name" mobiscroll-select="settings" mobiscroll-instance="demo">
+                    <option value="专科">专科</option>
+                    <option value="本科">本科</option>
+                    <option value="博士">博士</option>
+                    <option value="博士后">博士后</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+        </ion-item>
+    </ion-list>
+
+      <div class="button-bar bar-light padding">
+          <a class="button" ng-click="save_detail()">确定</a>
+      </div>
+
+
+
+</ion-content>
+</ion-view>
